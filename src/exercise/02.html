@@ -15,8 +15,12 @@
   <script type="module">
     const rootElement = document.getElementById('root')
 
-    const element = React.createElement('div', { children: 'Hello World' })
+    const children = [
+      React.createElement('span', { children: 'Hello' }),
+      React.createElement('span', { children: 'World' })
+    ];
+    const containerElement = React.createElement('div', { className: 'container', children  })
 
-    ReactDOM.createRoot(rootElement).render(element)
+    ReactDOM.createRoot(rootElement).render(containerElement)
   </script>
 </body>
